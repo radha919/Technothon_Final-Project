@@ -11,26 +11,31 @@
 <body>
 <header>
 <a href="#" class="logo">StopByNotes<span>.</span></a>
+<div class="menuToggle" onclick="toggleMenu();"></div>
 <ul class="navigation">
-<li><a href="#banner">Home</a></li>
-<li><a href="#about">About</a></li>
+    <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+    <li><a href="#about" onclick="toggleMenu();">About</a></li>
 
-<li><a href="#resources">Resources</a></li>
-<ul>
-<li><a href="#reading">Reading</a></li>
-<li><a href="#watching">Watching</a></li>
-</ul>
+    <li><a href="#resources" onclick="toggleMenu();">Resources</a></li>
+<!-- <ul>
+    <li><a href="#reading" onclick="toggleMenu();">Reading</a></li>
+    <li><a href="#watching" onclick="toggleMenu();">Watching</a></li>
+</ul> -->
 
-<li><a href="#contact">Contact Us</a></li>
+<li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
 </ul>
 </header>
 
     <section class="banner" id="banner">
-        <div class="content">
+        <!-- <div class="content">
             <h2>Always Choose Best</h2>
             <p>kuch bhi </p>
             <a href="#" class="btn">Resources</a>
-        </div>
+        </div> -->
+            
+            <h1>UPLIFT YOUR SKILLS!</h1>
+            
+        
 
     </section>
 
@@ -38,7 +43,10 @@
     <div class="row">
     <div class="col50">
     <h2 class="titleText"><span>A</span>bout Us</h2>
-    <p> We are 
+    <p>Looking for a perfect website to collect data about your field. Well, you are at the right place. StopBy Notes provide you with the links to access the free courses, platforms, useful websites and videos to learn from. Hence, enhance learning in the field of education sector.
+        In this tough time, students are unable to go to school and college but this should not stop you from gaining knowledge and working on your skills. This website provides you with all of your needs. Anyone can use to find the best resources for the particular skill want to learn.
+        You can also register yourself on our website and upload your notes and contribute to our website. 
+        Wishing you all the best.
     </p>
     </div>
     <div class="col50">
@@ -52,13 +60,13 @@
     <section class="resources" id="resources">
         <div class="title">
             <h2 class="titleText">Our <span>R</span>esources</h2>
-            <p> resources acche wale
+            <p style="font-size: larger"><strong> We are always confused whether we are using good resource or not for uplifting our skills.</strong>
             </p>
         </div>
         <div class="content">
             <div class="box">
                 <div class="imgBx">
-                    <img src="">
+                    <img src="image/books-2596809_1920.jpg">
                 </div>
                 <div class="text">
                     <h3>Reading Material</h3>
@@ -66,7 +74,7 @@
            </div>
            <div class="box">
                     <div class="imgBx">
-                        <img src="">
+                        <img src="image/pexels-julia-m-cameron-4145153.jpg">
                     </div>
                     <div class="text">
                         <h3>Visual Material</h3>
@@ -75,32 +83,69 @@
         </div>
         </div>
         <div class="title">
-            <a href="#" class="btn">View all</a>
+            <p style="font-size: larger"><strong>Have collected some really awesome courses and videos. Access it by</strong> <a href="demo.html" class="btn">clicking here</a>.</p>
+            <!-- <a href="#" class="btn">View all</a> -->
         </div>
     </section>
 
     
 
     <section class="contact" id="contact">
-        <div class="title">
-            <h2 class="titleText"><span>C</span>ontact us</h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            </p>
-        </div>
+        <!-- <div class="title"> -->
+            <h2 class="titleText" style="color: black"><span>C</span>ontact us</h2>
+            
+        <!-- </div> -->
         <div class="contactForm">
             <h3>Send Message</h3>
             <div class="inputBox">
-                <input type="text" placeholder="Name">
-                </div>
+                <input type="text" placeholder="Name" style="text-align: center;
+                /* max-width: fit-content; */
+                background-color: white;
+                width: 399px">
+
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Email" style="text-align: center;
+                /* max-width: fit-content; */
+                background-color: white;
+                width: 399px">
+            </div>
+            <div class="inputBox">
+                <textarea placeholder="Feedback" style="text-align: center;
+                /* max-width: fit-content; */
+                background-color: white;
+                width: 399px"></textarea>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Send" style="text-align: center;
+                /* max-width: fit-content; */
+                background-color:black;
+                width: 399px">
+            </div>
         </div>
     </section>
+    
+    <div class="copyrightText">
+        <p style="color:white">Copyright 2021 <a href="#">Online Tutorials</a>. All rights Reserved</p>
+    </div>
 
     <script type="text/javascript">
     window.addEventListener('scroll',function() {
         const header= document.querySelector('header');
         header.classList.toggle("sticky", window.scrollY > 0);
     });
+
+    function toggleMenu()
+{
+    const menuToggle = document.querySelector('.menuToggle');
+    const navigation = document.querySelector('.navigation');
+    menuToggle.classList.toggle('active');
+    navigationclassList.toggle('active');
+}
     </script>
+
+
+
     
 </body>
 </html>
